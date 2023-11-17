@@ -56,7 +56,8 @@ export const myProjects = [
     category: ["vanilla"],
     img: "./projects/7.png",
     link: "https://mano4life.github.io/30-days-JS/no4_QuoteCreator/",
-    github: "https://github.com/Mano4life/30-days-JS/tree/main/no4_QuoteCreator",
+    github:
+      "https://github.com/Mano4life/30-days-JS/tree/main/no4_QuoteCreator",
   },
   {
     title: "quiz form",
@@ -77,9 +78,9 @@ export const myProjects = [
   {
     title: "React Portfolio",
     subtitle: "my first React Portfolio",
-    category: ["React"],
+    category: ["react"],
     img: "./projects/10.png",
-    link: "https://mano4life.github.io/30-days-JS/no5_QRgenerator/",
-    github: "https://github.com/Mano4life/30-days-JS/tree/main/no5_QRgenerator",
+    link: "https://mano4life.github.io/portfolio/",
+    github: "https://github.com/Mano4life/portfolio",
   },
 ];
