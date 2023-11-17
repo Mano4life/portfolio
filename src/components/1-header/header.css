@@ -1,0 +1,153 @@
+/* ===========================
+  table of contents
+==============================
+
+1-Header Styles
+2-Icons & Buttons Styles
+3-Menu Styles
+4-Animations
+5-Responsive Design(Media Query)
+
+
+*/
+
+/*===================== 1- HEADER STYLES =====================*/
+
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 0px 0px 20px #42424248;
+}
+
+header ul.flex {
+  gap: 16px;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+header button {
+  font-size: 1.2rem;
+}
+
+header .menu {
+  display: none;
+}
+
+/*===================== 2- ICONS & BUTTONS STYLES =====================*/
+
+header .icons {
+  background-color: var(--bgHeader);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+
+  justify-content: center;
+  text-align: center;
+
+  color: var(--subtitle);
+  border: 1px solid var(--accentlight);
+
+  transition: 0.2s;
+}
+
+header .icons:hover {
+  color: var(--title);
+  border: 1px solid var(--accent);
+}
+
+header .fa-xmark {
+  font-size: 1.3rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+
+header .fa-xmark:hover {
+  color: var(--accent);
+  rotate: 180deg;
+}
+
+/*===================== 3- MENU STYLE =====================*/
+
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: #27272ab7;
+  z-index: 10;
+  display: none;
+  backdrop-filter: blur(10px);
+}
+
+.light header .fixed {
+  background-color: #ffffff73;
+}
+
+header .fixed .menu {
+  width: 100%;
+  height: 100%;
+  margin: 5rem  0;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+header .fixed .menu li {
+  width: 100%;
+  border-bottom: 1px solid var(--accent);
+  padding: 0.8rem 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header .fixed .menu li:first-child {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  background-color: transparent;
+  text-align: right;
+  border: none;
+  padding: 0.2rem 0 0 0;
+  margin-bottom: -1.6rem;
+}
+
+header .fixed .menu li:last-child {
+  border: none;
+}
+
+header .fixed .menu li a {
+  font-size: 1rem;
+  color: var(--title);
+}
+
+/*===================== 5- Responsive Design(Media Query) =====================*/
+
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header .fixed {
+    display: block;
+  }
+
+  header .menu {
+    display: block;
+  }
+}

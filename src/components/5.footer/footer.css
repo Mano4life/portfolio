@@ -1,0 +1,25 @@
+
+
+footer ul.list{
+    justify-content: center;
+    gap: 2rem;
+    color: var(--subtitle);
+    padding-bottom: 3rem;
+}
+
+footer .list li {
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+footer .list li:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+}
+
+@media (max-width: 600px) {
+    footer ul.list {
+        gap: 1rem;
+    }
+}

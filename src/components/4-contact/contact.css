@@ -1,0 +1,165 @@
+/* ===========================
+  table of contents
+==============================
+
+1- Left Section.
+2- Right Section.
+3- Media Query.
+
+*/
+
+.contact {
+  gap: 2rem;
+  justify-content: space-between;
+
+}
+
+/*===================== 1- LEFT SECTION =====================*/
+
+.contact .left-section h1 {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--title);
+}
+
+.contact .left-section h1 i {
+  color: var(--subtitle);
+}
+
+.contact .left-section p {
+  color: var(--subtitle);
+  margin-bottom: 4rem;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.email-wrapper,
+.message-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.email-wrapper #email,
+.message-wrapper #message {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(36, 37, 46, 1);
+  color: var(--title);
+  outline: none;
+  transition: 0.3s;
+}
+
+.light .email-wrapper #email,
+.light .message-wrapper #message {
+  background-color: #ddd;
+}
+
+.message-wrapper #message {
+  min-height: 7rem;
+}
+
+.email-wrapper #email:hover,
+.message-wrapper #message:hover {
+  border: 1px solid var(--subtitle);
+}
+
+.email-wrapper #email:focus,
+.message-wrapper #message:focus {
+  border: 1px solid var(--accent);
+}
+
+.email-wrapper .email-label,
+.message-wrapper .message-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--subtitle);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.email-wrapper #email:focus ~ .email-label,
+.message-wrapper #message:focus ~ .message-label,
+.email-wrapper #email:valid ~ .email-label,
+.message-wrapper #message:valid ~ .message-label {
+  top: -20px;
+  font-size: 16px;
+  color: var(--title);
+}
+
+.contact .submit {
+  all: unset;
+  padding: 0.75rem 0;
+  width: 11rem;
+  text-align: center;
+  background-color: rgba(36, 37, 46, 1);
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contact .submit:hover {
+  opacity: 1;
+}
+
+.contact .submit-message {
+  font-size: 18px;
+  color: var(--subtitle);
+  align-items: center;
+}
+
+/*===================== 2- RIGHT SECTION =====================*/
+
+.contact .right-section #contact-animation {
+  height: 400px;
+}
+
+/*===================== 3- MEDIA QUERY =====================*/
+
+@media (max-width: 1100px) {
+  .contact .right-section {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .contact .right-section {
+    display: none;
+  }
+  .contact .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .left-section .title{
+    transform: translateX(-10px);
+  }
+
+  .contact .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact .left-section h1 {
+    font-size: 28px;
+  }
+
+  .contact .left-section p {
+    font-size: 14px;
+  }
+}
